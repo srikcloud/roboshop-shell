@@ -19,3 +19,4 @@ nodejs(){
     unzip /tmp/${component_name}.zip
     npm install
 }
+pwd=${pwd}
