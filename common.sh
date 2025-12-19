@@ -4,9 +4,18 @@ systemd_setup(){
     systemctl start ${component_name}
 }
 
-
 nodejs(){
+    cp ${component_name}.service /etc/systemd/system/${component_name}.service
     dnf module disable nodejs -y
     dnf module enable nodejs:20 -y
     dnf install nodejs -y
+    useradd roboshop
+    rm -rf /app
+    mkdir /app
+    cd /app 
+    npm install
+    curl -L -o /tmp/${component_name}.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
+    cd /app 
+    unzip /tmp/${component_name}.zip
+    npm install
 }
