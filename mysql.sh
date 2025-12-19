@@ -18,3 +18,4 @@ systemctl start mysqld
 
 mysql_secure_installation --set-root-pass $PASSWORD
 
+
