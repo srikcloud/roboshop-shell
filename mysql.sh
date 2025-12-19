@@ -3,13 +3,13 @@ echo Input password is missing
 exit
 fi
 
-if [ -n "${MYSQL_ROOT_PASSWORD}" ]; then
-  PASSWORD=$MYSQL_ROOT_PASSWORD
-fi
+#if [ -n "${MYSQL_ROOT_PASSWORD}" ]; then
+#  PASSWORD=$MYSQL_ROOT_PASSWORD
+#fi
 
-if [ -n "$1" ];then
-  PASSWORD=$1
-fi
+#if [ -n "$1" ];then
+ # PASSWORD=$1
+#fi
 
 dnf install mysql-server -y
 
