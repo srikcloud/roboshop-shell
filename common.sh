@@ -31,3 +31,10 @@ python(){
     app_pre_setup
     pip3 install -r requirements.txt
 }
+
+java (){
+    dnf install maven -y
+    app_pre_setup
+     mvn clean package 
+    mv target/${component_name}-1.0.jar ${component_name}.jar
+}
