@@ -11,7 +11,6 @@ app_pre_setup(){
     rm -rf /app
     mkdir /app
     cd /app
-    npm install
     curl -L -o /tmp/${component_name}.zip https://roboshop-artifacts.s3.amazonaws.com/${component_name}-v3.zip 
     unzip /tmp/${component_name}.zip
     
